@@ -2,7 +2,7 @@
 
 A reversible event store. WIP.
 
-This package aims to provide a bidirectional event-based state management system which supports timeline recomputation. This allows applications to change past actions while ensuring future state is affected in a predictable and deterministic manner. Useful for turn-based games or other applications where previous actions can be changed.
+This package aims to provide a bidirectional event-based state management system which supports timeline recomputation. This allows applications to change past actions while ensuring future state is affected in a predictable way. Useful for turn-based games or other applications where previous actions can be changed.
 
 
 ```js
