@@ -20,7 +20,7 @@ export default class Store {
                 return this.states.pop()
         }
 
-        back() {
+        reverse() {
                 if (this.index > 0) {
                         const state = this.states[this.index - 1]
                         this.index --
@@ -42,7 +42,7 @@ export default class Store {
                 return this.states[this.states.length - 1]
         }
 
-        alter(index, action) {
+        replace(index, action) {
                 const original_index = this.index
                 this.states[index + 1] = [action, this.reducer(this.states[index], action)]
 
@@ -55,7 +55,7 @@ export default class Store {
                 return this.states[original_index]
         }
 
-        now() {
+        resume() {
                 this.index = this.states.length - 1
                 return this.states[this.index]
         }
