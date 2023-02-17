@@ -15,7 +15,7 @@ const store = new Store(
 )
 ```
 
-Dispatch actions.
+Perform actions.
 
 ```js
 store.push('increment') // 1
@@ -26,13 +26,13 @@ store.push('decrement') // 1
 Move forwards or backwards in time.
 
 ```js
-store.backward() // 2
+store.reverse() // 2
 store.forward() // 1
 ```
 
-Change prior actions (recomputes the timeline).
+Change prior actions and recompute the timeline deterministically.
 
 ```js
-store.change(0, 'decrement') // Set the initial action to `decrement` instead of `increment`.
-                             // The new timeline is 0 -> 1 -> 0
+store.replace(0, 'decrement') // Set the initial action to `decrement` instead of `increment`.
+                              // The new timeline is 0 -> 1 -> 0
 ```
